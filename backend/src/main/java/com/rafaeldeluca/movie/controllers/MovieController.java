@@ -1,5 +1,7 @@
-package rafaeldeluca.com.movie.controllers;
+package com.rafaeldeluca.movie.controllers;
 
+import com.rafaeldeluca.movie.entities.dto.MovieDTO;
+import com.rafaeldeluca.movie.services.MovieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -7,8 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
-import rafaeldeluca.com.movie.entities.dto.MovieDTO;
-import rafaeldeluca.com.movie.services.MovieService;
 
 import java.net.URI;
 

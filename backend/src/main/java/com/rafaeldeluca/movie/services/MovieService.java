@@ -1,4 +1,4 @@
-package rafaeldeluca.com.movie.services;
+package com.rafaeldeluca.movie.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -6,9 +6,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import rafaeldeluca.com.movie.entities.Movie;
-import rafaeldeluca.com.movie.entities.dto.MovieDTO;
-import rafaeldeluca.com.movie.repositories.MovieRepository;
+import com.rafaeldeluca.movie.entities.Movie;
+import com.rafaeldeluca.movie.entities.dto.MovieDTO;
+import com.rafaeldeluca.movie.repositories.MovieRepository;
 
 // Regras de negócio ficam na camada de serviço
 //Anotacao Service registra o MovieService como componente do sistema

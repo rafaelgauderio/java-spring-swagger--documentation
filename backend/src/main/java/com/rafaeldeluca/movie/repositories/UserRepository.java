@@ -1,8 +1,7 @@
-package rafaeldeluca.com.movie.repositories;
+package com.rafaeldeluca.movie.repositories;
 
+import com.rafaeldeluca.movie.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import rafaeldeluca.com.movie.entities.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 	

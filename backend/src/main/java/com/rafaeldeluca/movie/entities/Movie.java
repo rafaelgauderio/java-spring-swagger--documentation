@@ -1,4 +1,4 @@
-package rafaeldeluca.com.movie.entities;
+package com.rafaeldeluca.movie.entities;
 
 import java.util.HashSet;
 import java.util.Set;

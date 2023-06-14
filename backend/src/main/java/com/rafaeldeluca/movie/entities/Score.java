@@ -1,4 +1,4 @@
-package rafaeldeluca.com.movie.entities;
+package com.rafaeldeluca.movie.entities;
 
 
 import javax.persistence.EmbeddedId;

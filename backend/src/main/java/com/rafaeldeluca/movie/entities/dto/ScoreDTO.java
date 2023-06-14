@@ -1,4 +1,4 @@
-package rafaeldeluca.com.movie.entities.dto;
+package com.rafaeldeluca.movie.entities.dto;
 
 public class ScoreDTO {
 	

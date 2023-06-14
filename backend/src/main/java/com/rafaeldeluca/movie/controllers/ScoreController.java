@@ -1,14 +1,13 @@
-package rafaeldeluca.com.movie.controllers;
+package com.rafaeldeluca.movie.controllers;
 
+import com.rafaeldeluca.movie.entities.dto.MovieDTO;
+import com.rafaeldeluca.movie.entities.dto.ScoreDTO;
+import com.rafaeldeluca.movie.services.ScoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import rafaeldeluca.com.movie.entities.dto.MovieDTO;
-import rafaeldeluca.com.movie.entities.dto.ScoreDTO;
-import rafaeldeluca.com.movie.services.ScoreService;
 
 @RestController
 @RequestMapping(value ="/scores")

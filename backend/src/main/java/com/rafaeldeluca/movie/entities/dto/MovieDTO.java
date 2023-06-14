@@ -1,6 +1,6 @@
-package rafaeldeluca.com.movie.entities.dto;
+package com.rafaeldeluca.movie.entities.dto;
 
-import rafaeldeluca.com.movie.entities.Movie;
+import com.rafaeldeluca.movie.entities.Movie;
 
 // Objetos DTO são simples e não estão monitorarados pela JPA(Java Persistence API).
 // Não fazem transações com o bando de dados

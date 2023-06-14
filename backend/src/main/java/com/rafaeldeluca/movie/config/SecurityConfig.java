@@ -1,4 +1,4 @@
-package rafaeldeluca.com.movie.config;
+package com.rafaeldeluca.movie.config;
 
 import java.util.Arrays;
 

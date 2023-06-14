@@ -1,9 +1,8 @@
-package rafaeldeluca.com.movie.repositories;
+package com.rafaeldeluca.movie.repositories;
 
+import com.rafaeldeluca.movie.entities.Score;
+import com.rafaeldeluca.movie.entities.ScorePK;
 import org.springframework.data.jpa.repository.JpaRepository;
-
-import rafaeldeluca.com.movie.entities.Score;
-import rafaeldeluca.com.movie.entities.ScorePK;
 
 public interface ScoreRepository extends JpaRepository<Score, ScorePK> {
 

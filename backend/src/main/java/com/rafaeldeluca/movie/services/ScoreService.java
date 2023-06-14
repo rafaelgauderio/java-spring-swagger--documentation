@@ -1,17 +1,17 @@
-package rafaeldeluca.com.movie.services;
+package com.rafaeldeluca.movie.services;
 
+import com.rafaeldeluca.movie.entities.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import rafaeldeluca.com.movie.entities.Movie;
-import rafaeldeluca.com.movie.entities.Score;
-import rafaeldeluca.com.movie.entities.User;
-import rafaeldeluca.com.movie.entities.dto.MovieDTO;
-import rafaeldeluca.com.movie.entities.dto.ScoreDTO;
-import rafaeldeluca.com.movie.repositories.MovieRepository;
-import rafaeldeluca.com.movie.repositories.ScoreRepository;
-import rafaeldeluca.com.movie.repositories.UserRepository;
+import com.rafaeldeluca.movie.entities.Movie;
+import com.rafaeldeluca.movie.entities.Score;
+import com.rafaeldeluca.movie.entities.dto.MovieDTO;
+import com.rafaeldeluca.movie.entities.dto.ScoreDTO;
+import com.rafaeldeluca.movie.repositories.MovieRepository;
+import com.rafaeldeluca.movie.repositories.ScoreRepository;
+import com.rafaeldeluca.movie.repositories.UserRepository;
 
 @Service
 public class ScoreService {
