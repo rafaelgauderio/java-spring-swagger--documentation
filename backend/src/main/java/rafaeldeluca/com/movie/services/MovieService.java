@@ -37,4 +37,31 @@ public class MovieService {
 		
 	}
 
+	@Transactional(readOnly=false)
+	public MovieDTO insert (MovieDTO dto) {
+		Movie entity = dto.dtoToEntity();
+		entity = repository.save(entity);
+		return new MovieDTO(entity);
+	}
+
+	@Transactional(readOnly=false)
+	public MovieDTO update(MovieDTO dto, Long id) {
+		//Movie entity = repository.getReferenceById(id);
+		Movie entity = repository.getById(id);
+		updateMovieData(entity, dto);
+		entity = repository.save(entity);
+		return new MovieDTO(entity);
+	}
+
+	private void updateMovieData(Movie entity, MovieDTO dto) {
+		entity.setTitle(dto.getTitle());
+		entity.setScore(dto.getScore());
+		entity.setImage(dto.getImage());
+		entity.setCount(dto.getCount());
+	}
+
+	public void delete (Long id) {
+		repository.deleteById(id);
+	}
+
 }

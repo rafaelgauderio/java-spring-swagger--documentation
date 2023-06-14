@@ -71,7 +71,9 @@ public class MovieDTO {
 	public void setImage(String image) {
 		this.image = image;
 	}
-	
-	
 
+	public Movie dtoToEntity() {
+		Movie entity = new Movie(this.id, this.title, this.score, this.count, this.image);
+		return entity;
+	}
 }
