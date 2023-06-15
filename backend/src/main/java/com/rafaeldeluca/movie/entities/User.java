@@ -1,12 +1,14 @@
 package com.rafaeldeluca.movie.entities;
 
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 @Entity
 @Table(name="tb_user")
@@ -52,11 +54,11 @@ public class User implements UserDetails {
 		this.email = email;
 	}
 
+
+	@Override
 	public String getPassword() {
 		return password;
 	}
-
-
 
 	public void setPassword(String password) {
 		this.password = password;
@@ -71,7 +73,11 @@ public class User implements UserDetails {
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return (Collection<? extends GrantedAuthority>) authorities;
+
+		// transformar cada elemento do tipo role para Granted Authority
+		return this.authorities.stream().map((role) -> new SimpleGrantedAuthority(role.getAuthority()))
+				.collect(Collectors.toList());
+
 	}
 
 	@Override
