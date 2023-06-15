@@ -25,9 +25,10 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	
 	// endpoint public a todos para poder logar
 	private static final String [] PUBLIC = {"/h2-console/**","/oauth/token"};
-	
-	// rotas liberadas para admin e operador
-	private static final String [] ADMIM_OR_OPERATOR = {"/products/**", "/categories/**"};
+
+	private static final String [] ALL_USERS_GET_METHOD = {"/movies/**"};
+
+	private static final String [] ALL_USERS_PUT_METHOD = {"/scores/**"};
 	
 	private static final String [] ADMINISTRATOR = {"/users/**"}; 
 		
@@ -55,10 +56,10 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 		
 		http.authorizeRequests()
 		.antMatchers(PUBLIC).permitAll()
-		.antMatchers(HttpMethod.GET, ADMIM_OR_OPERATOR).permitAll()	//liberar para todos apenas consultas GET
-		.antMatchers(ADMINISTRATOR).hasRole("ADMIN")
-		.anyRequest().authenticated(); // para acessar qualquer outra rota não espeficicada tem que estar logado
-		
+		.antMatchers(HttpMethod.GET,ALL_USERS_GET_METHOD).permitAll()
+		.antMatchers(HttpMethod.PUT,ALL_USERS_PUT_METHOD).permitAll()
+		.anyRequest().hasAnyRole("ADMIN");
+		//.anyRequest().authenticated(); // para acessar qualquer outra rota não espeficicada tem que estar logado
 		http.cors().configurationSource(corsConfigurationSource());
 	}	
 	
